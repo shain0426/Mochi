@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mochiData"
+            type="com.tumeow.mochi.data.database.dataentities.MochiData" />
+
+        <variable
+            name="itemClickbt"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClickListener="@{itemClickbt}"
+        android:layout_marginTop="8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:text="@string/datetime"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mochiData.date}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/date_title"
+            app:layout_constraintStart_toEndOf="@+id/date_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:text="@string/itemTitle"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/date_title"
+            app:layout_constraintTop_toBottomOf="@id/date_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mochiData.item}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_title"
+            app:layout_constraintStart_toEndOf="@+id/item_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:text="@string/priceTitle"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toBottomOf="@+id/item_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mochiData.price}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/price_title"
+            app:layout_constraintStart_toEndOf="@id/price_title" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grayyy"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

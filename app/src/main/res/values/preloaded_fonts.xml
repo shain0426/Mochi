@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alegreya_sans_sc</item>
+        <item>@font/caveat_bold</item>
+        <item>@font/cedarville_cursive</item>
+        <item>@font/charmonman_bold</item>
+        <item>@font/chilanka</item>
+        <item>@font/cute_font</item>
+        <item>@font/geo</item>
+        <item>@font/gugi</item>
+        <item>@font/handlee</item>
+        <item>@font/iceland</item>
+        <item>@font/im_fell_great_primer_sc</item>
+        <item>@font/lusitana</item>
+        <item>@font/macondo_swash_caps</item>
+        <item>@font/marcellus</item>
+        <item>@font/marcellus_sc</item>
+        <item>@font/marvel</item>
+        <item>@font/mr_dafoe</item>
+        <item>@font/nova_mono</item>
+        <item>@font/nova_slim</item>
+        <item>@font/ntr</item>
+        <item>@font/oxanium</item>
+        <item>@font/parisienne</item>
+        <item>@font/patrick_hand_sc</item>
+        <item>@font/play</item>
+        <item>@font/playfair_display_sc</item>
+        <item>@font/teko_light</item>
+        <item>@font/vesper_libre</item>
+        <item>@font/waiting_for_the_sunrise</item>
+        <item>@font/yesteryear</item>
+    </array>
+</resources>

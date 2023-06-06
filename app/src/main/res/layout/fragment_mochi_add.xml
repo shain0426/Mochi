@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="addEntity"
+            type="com.tumeow.mochi.data.entities.MochiAddEntity" />
+
+        <variable
+            name="addOnClickbt"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/addDateTitle"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addDateLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/addDateTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/addDateTitle"
+            app:layout_constraintEnd_toStartOf="@+id/addCalendar"
+            app:layout_constraintStart_toEndOf="@+id/addDateTitle"
+            app:layout_constraintTop_toTopOf="@+id/addDateTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:text="@{addEntity.addDate}"
+                android:textColor="@color/blueee" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/addCalendar"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_marginEnd="32dp"
+            android:onClickListener="@{addOnClickbt}"
+            app:layout_constraintBottom_toBottomOf="@+id/addDateLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addDateLayout"
+            app:srcCompat="@drawable/icon_calendar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/addItemTitle"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/addDateTitle"
+            app:layout_constraintTop_toBottomOf="@+id/addDateTitle" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addItemLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/addItemTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/addItemTitle"
+            app:layout_constraintEnd_toEndOf="@+id/addDateLayout"
+            app:layout_constraintStart_toEndOf="@+id/addItemTitle"
+            app:layout_constraintTop_toTopOf="@+id/addItemTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addItem"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:text="@={addEntity.addItem}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addPriceTitle"
+            android:layout_marginTop="40dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/addItemTitle"
+            app:layout_constraintTop_toBottomOf="@+id/addItemTitle" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addPriceLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/addPriceTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/addPriceTitle"
+            app:layout_constraintEnd_toEndOf="@+id/addItemLayout"
+            app:layout_constraintStart_toEndOf="@+id/addPriceTitle"
+            app:layout_constraintTop_toTopOf="@+id/addPriceTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addPrice"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:text="@={addEntity.addPrice}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addItemButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            android:backgroundTint="@color/blueee"
+            android:onClickListener="@{addOnClickbt}"
+            android:text="@{addEntity.reviseBT}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addPriceLayout" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mochi_navigation"
+    app:startDestination="@+id/list_fragment">
+
+<!--指定大家都可以去的目的地-->
+    <action
+        android:id="@+id/action_any_fragment_to_add_fragment"
+        app:destination="@+id/add_fragment" />
+
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.tumeow.mochi.ui.mochimoney.mochimoneyhistory.MochiHistoryFragment"
+        android:label="@string/titleMochi"
+        tools:layout="@layout/fragment_mochi_main_list" >
+
+        <action
+            android:id="@+id/action_list_fragment_to_add_fragment"
+            app:destination="@id/add_fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_fragment"
+        android:name="com.tumeow.mochi.ui.mochimoney.mochimoneyadd.MochiAddFragment"
+        android:label="@string/titleAdd"
+        tools:layout="@layout/fragment_mochi_add"/>
+
+
+
+</navigation>

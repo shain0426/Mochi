@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mochi</string>
+    <string name="titleMochi">M o c h i B a r</string>
+    <string name="search">輸入品項/金額 or 點選右側日期搜尋</string>
+    <string name="go">G\tO</string>
+    <string name="showAll"><u>Show All</u></string>
+    <string name="datetime">日期:\t\t</string>
+    <string name="itemTitle">品項:\t\t</string>
+    <string name="priceTitle">金額:\t\t</string>
+    <string name="cancelBT">取消</string>
+    <string name="reviseBT">修改</string>
+    <string name="deleteBT">刪除</string>
+
+
+    <string name="titleAdd">編 輯</string>
+    <string name="addDateTitle">日 期 </string>
+    <string name="addItemTitle">品 項 </string>
+    <string name="addPriceTitle">金 額 </string>
+    <string name="addDate">新增日期</string>
+    <string name="addItem">新增品項</string>
+    <string name="addPrice">新增金額</string>
+
+    <string name="add">+ 新增  </string>
+    <string name="update">更新</string>
+
+    <string name="addSuccess">新增成功!</string>
+    <string name="addRevise">修改成功!</string>
+    <string name="addItemFalse">品項未填!</string>
+    <string name="addPriceFalse">金額未填!</string>
+
+
+
+</resources>
