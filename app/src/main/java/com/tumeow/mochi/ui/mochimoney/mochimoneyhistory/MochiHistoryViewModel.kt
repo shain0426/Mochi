@@ -16,8 +16,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.Instant
 import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.ZoneId
 import java.time.ZoneOffset
 
 class MochiHistoryViewModel(private val mochiRepository: MochiRepository) : ViewModel() {
@@ -82,8 +80,8 @@ class MochiHistoryViewModel(private val mochiRepository: MochiRepository) : View
             addOnPositiveButtonClickListener {
 
                 chosenDate = Pair(
-                    LocalDateTime.ofInstant(Instant.ofEpochMilli(it.first), ZoneId.systemDefault()).toLocalDate(),
-                    LocalDateTime.ofInstant(Instant.ofEpochMilli(it.second), ZoneId.systemDefault()).toLocalDate()
+                    Instant.ofEpochMilli(it.first).atOffset(ZoneOffset.UTC).toLocalDate(),
+                    Instant.ofEpochMilli(it.second).atOffset(ZoneOffset.UTC).toLocalDate()
                 )
 
                 searchItem(itemClick)

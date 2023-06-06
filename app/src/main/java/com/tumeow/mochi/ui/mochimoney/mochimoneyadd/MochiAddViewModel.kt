@@ -14,8 +14,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.Instant
 import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
@@ -69,7 +67,7 @@ class MochiAddViewModel(private val mochiRepository: MochiRepository) : ViewMode
             //把Milisecond轉成localdatetime
             addOnPositiveButtonClickListener {
 
-                val putDate: LocalDate = LocalDateTime.ofInstant(Instant.ofEpochMilli(it), ZoneId.systemDefault()).toLocalDate()
+                val putDate: LocalDate = Instant.ofEpochMilli(it).atOffset(ZoneOffset.UTC).toLocalDate()
 
                 addEntity.addDate.value = putDate.toString()
 
